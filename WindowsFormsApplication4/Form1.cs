@@ -24,11 +24,14 @@ namespace WindowsFormsApplication4
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Car v = new WindowsFormsApplication4.Car();
+         
+            Automobile v2=new WindowsFormsApplication4.Automobile(); 
+            v2.printSpeed();
+           
 
         }
     }
-    class Automobile
+   abstract class  Automobile
     {
         // Constructor
         public Automobile()
@@ -39,6 +42,9 @@ namespace WindowsFormsApplication4
             Price = 0m;
         }
 
+        public virtual void printSpeed() {
+            Console.WriteLine("50 ");
+        }
         // Properties
         public string Make { get; set; }
         public string Model { get; set; }
@@ -52,6 +58,10 @@ namespace WindowsFormsApplication4
         public Car()
         {
             Doors = 0;
+        }
+        public override void printSpeed()
+        {
+            Console.WriteLine(" 1100");
         }
 
         // Doors property
